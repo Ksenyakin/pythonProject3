@@ -1,0 +1,41 @@
+<!-- myapp/templates/myapp/member_list.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Member List</title>
+</head>
+<body>
+    <h1>Member List</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Phone</th>
+                <th>Date of Birth</th>
+                <th>Lessons</th>
+                <th>First Subscription</th>
+                <th>Next Subscription</th>
+                <th>Valid Skips</th>
+                <th>Invalid Skips</th>
+                <th>Late</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for member in members %}
+            <tr>
+                <td>{{ member.name }}</td>
+                <td>{{ member.phone }}</td>
+                <td>{{ member.dob }}</td>
+                <td>{{ member.lessons }}</td>
+                <td>{{ member.first_subscription }}</td>
+                <td>{{ member.next_subscription }}</td>
+                <td>{{ member.valid_skips }}</td>
+                <td>{{ member.invalid_skips }}</td>
+                <td>{{ member.late }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </body>
+</html>
